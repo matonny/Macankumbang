@@ -7,7 +7,9 @@
 	<link href='https://necolas.github.io/normalize.css/6.0.0/normalize.css' rel='stylesheet'>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<link href='style.css' rel='stylesheet'>
+	<script src="jquery.bxslider.min.js"></script>
+	<link href="jquery.bxslider.css" rel="stylesheet"/>
+	<link href='style.css' rel='stylesheet'/>
 </head>
 <body>
 	<header class='header'>
@@ -23,13 +25,13 @@
 					<a href='#services' class='header__nav__list__item__link'>Services</a>
 				</li>
 				<li class='header__nav__list__item current__item'>
-					<a href='#' class='header__nav__list__item__link'>Work</a>
+					<a href='#portfolio' class='header__nav__list__item__link'>Work</a>
 				</li>
 				<li class='header__nav__list__item current__item'>
 					<a href='#' class='header__nav__list__item__link'>Testimonials</a>
 				</li>
 				<li class='header__nav__list__item current__item'>
-					<a href='#' class='header__nav__list__item__link'>Contact</a>
+					<a href='#contact' class='header__nav__list__item__link'>Contact</a>
 				</li>
 			</ul>
 		</nav>
@@ -131,7 +133,7 @@
 			</p>
 		</div>
 	</section>
-	<section class='portfolio'>
+	<section class='portfolio' id='portfolio'>
 		<div class='portfolio__container'>
 			<div class='portfolio__container__text'>
 				<h2 class='portfolio__container__text__title'>
@@ -220,31 +222,67 @@
 				</p>
 				<div class='customers__container__text__line'></div>
 			</div>
-			<div class='customers__container__customer'>
-				<div class='customers__container__customer__photo'></div>
-				<div class='customers__container__customer__text'>
-					<p class='customers__container__customer__text__quote'>
-						This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. 
-					</p>
-					<p class='customers__container__customer__text__sign'>
-						John Doe
-					</p>
-				</div>
-			</div>
-			<div class='customers__container__dots'>
-				<div class='customers__container__dots__dot'>
+			<ul class='bxslider'>
+				<li>
+					<div class='customers__container__customer'>
+						<div class='customers__container__customer__photo'></div>
+						<div class='customers__container__customer__text'>
+							<p class='customers__container__customer__text__quote'>
+								This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. 
+							</p>
+							<p class='customers__container__customer__text__sign'>
+								John Doe
+							</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class='customers__container__customer'>
+						<div class='customers__container__customer__photo'></div>
+						<div class='customers__container__customer__text'>
+							<p class='customers__container__customer__text__quote'>
+								This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. 
+							</p>
+							<p class='customers__container__customer__text__sign'>
+								John Doe
+							</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class='customers__container__customer'>
+						<div class='customers__container__customer__photo'></div>
+						<div class='customers__container__customer__text'>
+							<p class='customers__container__customer__text__quote'>
+								This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. 
+							</p>
+							<p class='customers__container__customer__text__sign'>
+								John Doe
+							</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class='customers__container__customer'>
+						<div class='customers__container__customer__photo'></div>
+						<div class='customers__container__customer__text'>
+							<p class='customers__container__customer__text__quote'>
+								This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. 
+							</p>
+							<p class='customers__container__customer__text__sign'>
+								John Doe
+							</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<ul class='customers__list'>
+				<li class='customers__list__dot'></li>
+				<li class='customers__list__dot'></li>
+				<li class='customers__list__dot'></li>
+				<li class='customers__list__dot special'></li>
 
-				</div>
-				<div class='customers__container__dots__dot'>
-
-				</div>
-				<div class='customers__container__dots__dot'>
-
-				</div>
-				<div class='customers__container__dots__special'>
-
-				</div>
-			</div>
+			</ul>
 		</div>
 	</section>
 	<section class='touch'>
@@ -259,7 +297,7 @@
 	</section>
 	<section class='map' id='map'>		
 	</section>
-	<section class='contact'>
+	<section class='contact' id='contact'>
 		<div class='contact__container'>
 			<div class='contact__container__text'>
 				<h2 class='contact__container__text__title'>
@@ -288,9 +326,9 @@
 						hello@macankumbang.net
 					</p>
 					<div class='contact__container__info__address__social'>
-						<img src='images/twitter.png' class='contact__container__info__address__social__image'>
-						<img src='images/facebook.png' class='contact__container__info__address__social__image'>
-						<img src='images/googe.png' class='contact__container__info__address__social__image'>
+						<img src='images/twitter.png' class='contact__container__info__address__social__image' alt='twitter'>
+						<img src='images/facebook.png' class='contact__container__info__address__social__image' alt='facebook'>
+						<img src='images/googe.png' class='contact__container__info__address__social__image' alt='google'>
 					</div>
 				</div>
 				<form class='contact__container__info__form'>

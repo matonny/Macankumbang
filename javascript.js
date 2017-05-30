@@ -10,6 +10,10 @@
       }
     }
   });
+  
+$(document).ready(function(){
+  $('.bxslider').bxSlider();
+});
 
 function initMap() {
   var uluru = {lat:50.210694 , lng: -5.483915};

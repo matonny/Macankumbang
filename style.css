@@ -536,24 +536,22 @@ body{
     font-family: 'Open-sans', sans-serif;
     color:#323232;
 }
-.customers__container__dots{
+.customers__list{
+    padding:0;
     margin:60px auto;
     display: -webkit-box;
     display: flex;
+    list-style-type: none;
 }
-.customers__container__dots__dot{
+.customers__list__dot{
     width:23px;
     height:23px;
     border-radius: 50%;
     background-color: #7b7b7b;
     margin: 0 5px;
 }
-.customers__container__dots__special{
-    width:23px;
-    height:23px;
-    border-radius: 50%;
+.special{
     background-color: #323232;
-    margin: 0 5px;
 }
 .touch{
     background-image: url('images/checked-background.png');
