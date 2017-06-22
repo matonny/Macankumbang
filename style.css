@@ -1,7 +1,8 @@
 body{
-    margin:0;
     padding:0;
+    scroll-behavior: smooth;    
 }
+body{}
 .header{
     background-color: black;
     display: -webkit-box;
@@ -59,10 +60,11 @@ body{
     font-family: 'Open-sans', sans-serif;
     font-size:24px;
 }
-.home__container__text__link__button{
+.home__container__text__link{
+    display: block;
     font-family: 'Open-sans', sans-serif;
     font-size:18px;
-    line-height: 24px;
+    line-height: 55px;
     color:white;
     background-color: #ea5b58;
     width:145px;
@@ -70,13 +72,9 @@ body{
     border:none;
     border-radius: 5px;
     cursor: pointer;
-}
-.home__container__text__link__button:focus{
-    outline: none;
-}
-.home__container__text__ink{
-    color:white;
+    text-align: center;
     text-decoration: none;
+    l
 }
 .home__container__text__link:visited{
     color:white;
@@ -85,7 +83,7 @@ body{
 .home__container__image{
     height: 350px;
     width: 465px;
-    background-color: white;
+    background: url('images/home.jpg');
     border-radius: 2px;
     box-shadow: -20px 20px 0 0 rgba(255,255,255, 0.2);
 }
@@ -197,16 +195,6 @@ body{
     -webkit-box-pack: center;
             justify-content: center;
     margin: 30px 30px;
-}
-.services__container__gallery__item__box{
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-            align-items: center;
-    width:45px;
-    height:45px;
 }
 .services__container__gallery__item__title{
     font-family: 'Open-sans', sans-serif;
@@ -391,6 +379,10 @@ body{
     -webkit-transition:0.5s;
     transition: 0.5s;
 }
+.portfolio__container__gallery__item__photo{
+    position: absolute;
+    transition: 0.5s;
+}
 .portfolio__container__gallery__item__description{
     font-family: 'Open-sans', sans-serif;
     font-size:14px;
@@ -409,6 +401,9 @@ body{
 }
 .portfolio__container__gallery__item:hover{
     background-color: #506083;
+}
+.portfolio__container__gallery__item:hover .portfolio__container__gallery__item__photo{
+    opacity:0;
 }
 .portfolio__container__gallery__item:hover .portfolio__container__gallery__item__title{
     opacity: 1;
@@ -503,7 +498,7 @@ body{
 .customers__container__customer__photo{
     width:270px;
     height:270px;
-    background-color: #7b7b7b;
+    background: url('images/client.jpg');
     border-radius: 50%;
 }
 .customers__container__customer__text{
@@ -512,9 +507,9 @@ body{
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-            flex-direction: column;
+    flex-direction: column;
 }
-.customers__container__customer__text__quote{
+.testimonial__text{
     font-family: 'Open-sans', sans-serif;
     font-size: 18px;
     line-height: 30px;
@@ -529,7 +524,7 @@ body{
     -webkit-transform: translate(-30px, 60px);
             transform: translate(-30px, 60px);
 }
-.customers__container__customer__text__sign{
+.testimonial__author{
     font-weight: bold;
     font-size: 24px;
     line-height: 24px;
@@ -543,15 +538,8 @@ body{
     display: flex;
     list-style-type: none;
 }
-.customers__list__dot{
-    width:23px;
-    height:23px;
-    border-radius: 50%;
-    background-color: #7b7b7b;
-    margin: 0 5px;
-}
-.special{
-    background-color: #323232;
+.bx-wrapper{
+    box-shadow: none;
 }
 .touch{
     background-image: url('images/checked-background.png');
@@ -649,6 +637,11 @@ body{
     -webkit-box-direction: normal;
             flex-direction: column;
     margin-right:50px;
+}
+.contact__container__info__address__social{
+    display: flex;
+    list-style-type: none;
+    padding:0;
 }
 .contact__container__info__address__title{
     font-weight: bold;
@@ -840,6 +833,9 @@ body{
         padding:0;
         margin:0 2px;
     }
+    .home{
+        height: 80vh;
+    }
     .contact__container{
         -webkit-box-align: center;
                 align-items: center;
@@ -889,5 +885,9 @@ body{
     .portfolio__container__gallery__item{
         width:280px;
         height:190px;
+    }
+    .portfolio__container__gallery__item__photo{
+        width:280px;
+        height: 190px;
     }
   }

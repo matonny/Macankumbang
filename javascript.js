@@ -1,15 +1,16 @@
-  $('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
-    }
-  });
+( function( $ ) {
+  'use strict';
+  $('a[href*="#"]:not([href="#"])').on( 'click', function(e) {
+    e.preventDefault();
+    var href = $( this ).attr( 'href' );
+    $( 'html, body' ).animate( { 
+      scrollTop: $( href ).offset().top + 'px'
+    }, 1500, function() {
+      location.hash = href;
+    } ); 
+  } );
+  
+} ( jQuery ) );
   
 $(document).ready(function(){
   $('.bxslider').bxSlider();
